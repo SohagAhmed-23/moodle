@@ -1,0 +1,95 @@
+
+.eupopup-container {
+
+    color: $textcolor;
+    background-color: rgba(255,255,255,.93);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: solid 1px rgba(0,0,0,.23);
+    right: 30px;
+    left: auto;
+    bottom: 30px;
+    width: 550px;
+    max-width: 95%;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 1.85rem;
+    overflow: hidden;
+    border-radius: var(--mb2-boxradius);
+    box-shadow: 0 6px 15px rgba(0,0,0,.2);
+    z-index: 1051;
+    text-align: inherit;
+
+    .eupopup-body {
+        a {
+            color: $linkcolor;
+            text-decoration: underline !important;
+
+            &:hover,
+            &:focus {
+                color: $linkhcolor;
+            }
+        }
+    }
+
+    ul {
+        gap: 1rem;
+
+        li {
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    .eupopup-buttons {
+        gap: 1rem;
+    }
+
+    .eupopup-head {
+        &:empty {
+            display: none;
+        }
+    }
+
+    .eupopup-button {
+        &:empty {
+            display: none;
+        }
+
+        --mb2-pb-btn-color: rgba(0,0,0,.7);
+        --mb2-pb-btn-bgcolor: rgba(255,255,255, .55);
+        --mb2-pb-btn-borcolor: rgba(0,0,0,.7);
+        --mb2-btn-bw: 1px;
+        --mb2-pb-btn-hcolor: var(--mb2-pb-btn-color);
+        --mb2-pb-btn-bghcolor: var(--mb2-pb-btn-bgcolor);
+        --mb2-pb-btn-borhcolor: var(--mb2-pb-btn-borcolor);
+
+        text-decoration: none !important;
+    }
+
+    .eupopup-closebutton {
+        opacity: 1;
+        font-size: 1.6rem;
+        top: 1rem;
+        right: 1rem;
+        color: rgba(0,0,0, .7);
+
+        &:hover,
+        &:focus {
+            color: #000;
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 810px){
+    .eupopup-container {
+        width: 95%;
+        left: 2.5%;
+        right: 2.5%;
+        bottom: 87px;
+    }
+
+}
